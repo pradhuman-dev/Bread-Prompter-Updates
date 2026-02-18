@@ -1,7 +1,7 @@
 # Privacy Policy for Bread Prompter
 
-**Last Updated:** [Date]  
-**Version:** 1.0.0
+**Last Updated:** [17 Feb 2026]  
+**Version:** 2.0.2
 
 ## Introduction
 
@@ -177,6 +177,7 @@ Bread Prompter is provided "as is" without warranties of any kind. We are not re
 
 ---
 
-**Effective Date:** [Date]  
-**Extension Version:** 1.0.0  
+**Effective Date:** [17 Feb 2026]  
+**Extension Version:** 2.0.2  
 **Policy Version:** 1.0
+
