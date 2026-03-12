@@ -1,183 +1,191 @@
 # Privacy Policy for Bread Prompter
 
-**Last Updated:** [17 Feb 2026]  
-**Version:** 2.0.2
+**Last Updated:** March 14, 2026
+**Policy Version:** 2.1.0
+**Extension Version:** 3.0.0
+
+---
+
+> **Quick Summary:** Bread Prompter is a privacy-first Chrome extension. All your data — prompts, API keys, and settings — is stored locally on your device with OS-level encryption. We collect zero personal data, run no tracking, and operate no servers of our own.
+
+---
 
 ## Introduction
 
-Bread Prompter ("we," "our," or "the Extension") is a Chrome browser extension that helps users interact with multiple AI chatbot platforms simultaneously. This Privacy Policy explains how we collect, use, store, and protect your information when you use our extension.
+Bread Prompter is a privacy-first Chrome browser extension that lets you interact with multiple AI chatbot platforms simultaneously — including ChatGPT, Google Gemini, Anthropic Claude, Grok, and DeepSeek — from a single, streamlined interface.
 
-By using Bread Prompter, you agree to the collection and use of information in accordance with this policy.
+This Privacy Policy explains exactly how we handle your data. The short version: we don't collect it, we don't store it on any server we control, and we don't share it with anyone.
+
+By installing and using Bread Prompter, you agree to the practices described in this policy.
+
+---
+
+## Our Core Privacy Commitment
+
+Bread Prompter is built on three non-negotiable privacy principles:
+
+- **Local-only storage** — all data stays on your device, never on our servers
+- **Zero personal data collection** — we do not collect names, emails, IP addresses, or any personally identifiable information (PII)
+- **No tracking or analytics** — we do not use cookies, fingerprinting, or behavioral tracking of any kind
+
+---
 
 ## Information We Collect
 
-### 1. User-Generated Content
-- **Prompts and Text Input**: The extension stores the text you enter in the extension's popup interface locally on your device using Chrome's local storage API (`chrome.storage.local`).
-- **Selected Web Page Text**: When you use the summarization feature, text you select from web pages is temporarily stored locally for processing.
-- **Speech-to-Text Data**: If you use the voice input feature, audio is processed locally in your browser and converted to text. Audio data is not stored or transmitted.
+### 1. User-Generated Content (Stored Locally Only)
 
-### 2. Configuration Data
-- **API Keys**: If you choose to enable AI-powered features (text refinement, context building), you may provide a Groq API key. This key is stored locally on your device using Chrome's local storage API.
-- **Extension Settings**: Your preferences for enabled/disabled AI models, tab group configurations, and other extension settings are stored locally.
+- **Prompts and text input** — text you type in the extension popup is saved locally on your device via Chrome's `storage.local` API
+- **Selected web page text** — when using the summarization feature, selected text is temporarily held in local memory for processing only
+- **Speech-to-text data** — voice input is processed entirely in your browser; no audio is ever recorded, stored, or transmitted
 
-### 3. Tab and Browser Information
-- **Tab Information**: The extension accesses tab information to manage AI chatbot tabs and organize them into groups. This information is used locally and not transmitted externally.
-- **Login Status**: The extension detects whether you are logged into supported AI platforms (ChatGPT, Gemini, Claude, Grok, DeepSeek) to provide status indicators. This information is stored locally and not shared.
+### 2. Configuration Data (Stored Locally Only)
 
-### 4. Technical Data
-- **Extension State**: Internal state information (such as which AI models are enabled, tab group IDs) is stored locally to maintain extension functionality.
+- **Groq API key** — if you provide one, it is stored locally using Chrome's encrypted storage API and never transmitted to us
+- **Extension preferences** — your enabled AI models, tab group settings, and UI preferences are stored locally
+
+### 3. Browser & Tab Information (Local Use Only)
+
+- **Tab data** — the extension accesses tab information solely to open, group, and manage AI chatbot tabs; this data never leaves your device
+- **Login status detection** — the extension detects whether you are logged into supported AI platforms to show status indicators; this information is stored locally and never shared
+
+### 4. What We Do NOT Collect
+
+- No names, email addresses, or contact information
+- No IP addresses or device identifiers
+- No browsing history outside of supported AI platform tabs
+- No usage analytics or telemetry
+- No crash reports or diagnostic data sent to our servers
+
+---
+
+## Data Storage & Encryption
+
+All data stored by Bread Prompter uses Chrome's `chrome.storage.local` API. This means:
+
+- Your data is stored on your **local device only** — not in the cloud, not on our servers
+- Chrome encrypts local extension storage at the **OS level** (DPAPI on Windows, Keychain on macOS, and equivalent on Linux)
+- Data is accessible **only to the Bread Prompter extension** — no other extensions or websites can read it
+- All data is **permanently deleted** when you uninstall the extension
+
+We do not implement any additional proprietary encryption on top of Chrome's built-in OS-level encryption. Your API keys and prompts are protected by the same encryption that secures your Chrome profile.
+
+---
 
 ## How We Use Your Information
 
 ### Local Processing
-- **Prompt Storage**: Your prompts are stored locally to enable features like undo/redo functionality and to restore your previous input when you reopen the extension.
-- **Tab Management**: Tab information is used to organize AI chatbot tabs into groups and manage their state.
-- **Login Detection**: Login status is detected to provide visual indicators in the extension interface.
 
-### External Services
+- **Prompt storage** — your prompts are saved locally to support undo/redo and to restore your last input when you reopen the extension
+- **Tab management** — tab data is used to organize AI chatbot tabs into groups and track their state
+- **Login detection** — login status is detected to display visual indicators in the extension UI
 
-#### 1. Groq API (Optional)
-If you provide a Groq API key and enable AI-powered features, the following data is sent to Groq's API service (`api.groq.com`):
-- **Text Refinement**: When you use the "Refine with AI" feature, your text input is sent to Groq's API to generate an improved prompt.
-- **Context Building**: When you use the "Build Context" feature, your initial prompt and selected answers to multiple-choice questions are sent to Groq's API to generate contextual prompts.
-- **Summarization**: When you use summarization features, selected text from web pages is sent to Groq's API.
+### External Services (Optional & User-Initiated Only)
 
-**Note**: Your Groq API key is used to authenticate requests to Groq's service. We do not have access to your API key or control over how Groq processes your data. Please review [Groq's Privacy Policy](https://groq.com/privacy) to understand how they handle your data.
+Bread Prompter only sends data externally when you explicitly trigger a feature that requires it.
 
-#### 2. AI Chatbot Platforms
-When you send prompts through the extension, your prompts are sent directly to the selected AI chatbot platforms:
+#### Groq API (Optional)
+
+If you provide a Groq API key and use AI-powered features, the following data is sent directly to Groq's API (`api.groq.com`):
+
+- Your text input — when using the **Refine with AI** or **Build Context** features
+- Selected web page text — when using the **summarization** feature
+
+We do not have access to your Groq API key or control over Groq's data practices. Please review [Groq's Privacy Policy](https://groq.com/privacy).
+
+#### AI Chatbot Platforms
+
+When you send a prompt through the extension, it is delivered directly to whichever AI platforms you select:
+
 - **ChatGPT** (chatgpt.com, chat.openai.com)
 - **Google Gemini** (gemini.google.com)
 - **Anthropic Claude** (claude.ai)
 - **Grok** (grok.com)
 - **DeepSeek** (chat.deepseek.com)
 
-These platforms process your prompts according to their respective privacy policies. We do not intercept, store, or have access to the responses from these platforms.
+We do not intercept, store, log, or have any access to these prompts or the AI responses you receive. Each platform processes your data under its own privacy policy.
 
-## Data Storage and Security
+---
 
-### Local Storage
-All data collected by the extension is stored locally on your device using Chrome's `chrome.storage.local` API. This includes:
-- User prompts
-- API keys (if provided)
-- Extension settings
-- Login status information
-- Selected text for summarization
+## Data Sharing & Disclosure
 
-**Important**: Data stored in `chrome.storage.local` is:
-- Stored on your local device only
-- Not encrypted by default (Chrome encrypts storage at the OS level)
-- Accessible only to this extension
-- Deleted if you uninstall the extension
+We do not sell, rent, trade, or share your data with any third party. Specifically:
 
-### Security Measures
-- We do not transmit your data to any servers we control
-- API keys are stored locally and used only to authenticate requests to third-party services
-- We do not collect, store, or transmit personal identifying information
-- All data processing occurs either locally in your browser or through the third-party services you choose to use
+- We do not sell your data to advertisers or data brokers
+- We do not share your data with marketing or analytics companies
+- We do not transmit any data to servers we own or operate
+- We do not disclose your data to law enforcement except as required by law (and since we hold no data, there is nothing to disclose)
 
-## Data Sharing and Disclosure
+---
 
-We do not:
-- Sell your data to third parties
-- Share your data with advertisers
-- Transmit your data to servers we control
-- Access your data except as necessary for extension functionality
+## Your Rights & Controls
 
-### Third-Party Services
-When you use AI-powered features, your data is sent to:
-- **Groq API** (if you provide an API key): For text refinement and context generation
-- **AI Chatbot Platforms**: For sending prompts and receiving responses
+### Access & Deletion
 
-These services have their own privacy policies and terms of service. We are not responsible for how these third parties handle your data.
-
-## Your Rights and Choices
-
-### Access and Control
-- **View Stored Data**: You can view data stored by the extension using Chrome's developer tools or by inspecting `chrome.storage.local`.
-- **Delete Data**: You can delete stored data by:
-  - Removing your API key through the extension's interface
-  - Clearing extension data in Chrome's extension settings
-  - Uninstalling the extension (which removes all stored data)
+- **View stored data** — use Chrome DevTools → Application → Extension Storage to inspect `chrome.storage.local`
+- **Delete your API key** — remove it through the extension's settings interface
+- **Clear all extension data** — go to Chrome Settings → Extensions → Bread Prompter → Clear storage
+- **Delete everything** — uninstalling the extension permanently removes all locally stored data
 
 ### Opt-Out Options
-- **Disable AI Features**: You can disable AI-powered features by removing your API key or not providing one. The extension will continue to function for basic prompt broadcasting without AI features.
-- **Disable Extension**: You can disable or uninstall the extension at any time through Chrome's extension management page.
 
-## Permissions Explanation
+- **Disable AI features** — simply don't provide a Groq API key; the extension functions fully for prompt broadcasting without it
+- **Disable the extension** — toggle it off or uninstall it at any time via `chrome://extensions`
 
-The extension requires the following permissions:
+---
 
-- **`tabs`**: To open, manage, and organize AI chatbot tabs into groups
-- **`storage`**: To store your prompts, settings, and API keys locally on your device
-- **`tabGroups`**: To organize AI chatbot tabs into a dedicated tab group
-- **Host Permissions**: To access AI chatbot platforms (chatgpt.com, claude.ai, gemini.google.com, grok.com, chat.deepseek.com) for:
-  - Detecting login status
-  - Injecting prompts into the chat interfaces
-  - Managing tab interactions
+## Chrome Permissions Explained
 
-These permissions are necessary for the extension's core functionality and are not used for any other purpose.
+Bread Prompter requests only the permissions it needs to function:
+
+- **`tabs`** — to open, manage, and group AI chatbot tabs
+- **`storage`** — to save your prompts, settings, and API key locally on your device
+- **`tabGroups`** — to organize AI chatbot tabs into a named group for easy navigation
+- **Host permissions** (`chatgpt.com`, `claude.ai`, `gemini.google.com`, `grok.com`, `chat.deepseek.com`) — to detect login status, inject prompts into chat interfaces, and manage tab interactions
+
+No permission is used for tracking, data collection, or any purpose beyond the extension's core features.
+
+---
 
 ## Children's Privacy
 
-Bread Prompter is not intended for use by children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us to have that information removed.
+Bread Prompter is not directed at children under 13. We do not knowingly collect any information from children. If you believe a child has used this extension and provided any personal data, please contact us and we will take appropriate action.
 
-## Changes to This Privacy Policy
+---
 
-We may update this Privacy Policy from time to time. We will notify you of any changes by:
-- Updating the "Last Updated" date at the top of this policy
-- Posting the new Privacy Policy in the extension's repository
-- Including a notice in the extension's update notes (if applicable)
+## Changes to This Policy
 
-You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted.
+We may update this Privacy Policy as the extension evolves. When we do:
 
-## Data Retention
+- The "Last Updated" date at the top of this document will be revised
+- A notice will be included in the extension's Chrome Web Store update notes
+- The updated policy will be published in our GitHub repository
 
-- **Local Storage**: Data stored locally remains on your device until:
-  - You manually delete it
-  - You uninstall the extension
-  - You clear Chrome's extension data
-  - You clear your browser's local storage
+We encourage you to review this policy periodically. Continued use of the extension after changes constitutes acceptance of the updated policy.
 
-- **Third-Party Services**: We do not control how long third-party services (Groq, AI chatbot platforms) retain your data. Please refer to their respective privacy policies.
-
-## International Data Transfers
-
-When you use AI-powered features, your data may be processed by third-party services located outside your country of residence. By using these features, you consent to the transfer of your data to these services.
-
-## Contact Information
-
-If you have any questions about this Privacy Policy or our data practices, please contact us through:
-- **GitHub Repository**: [Your Repository URL]
-- **Chrome Web Store**: [Your Extension Page URL]
+---
 
 ## Compliance
 
 This Privacy Policy is designed to comply with:
+
 - General Data Protection Regulation (GDPR)
 - California Consumer Privacy Act (CCPA)
 - Chrome Web Store Developer Program Policies
-
-## Disclaimer
-
-Bread Prompter is provided "as is" without warranties of any kind. We are not responsible for:
-- How third-party AI services (Groq, ChatGPT, Gemini, Claude, Grok, DeepSeek) process or store your data
-- The accuracy or quality of AI-generated responses
-- Any data breaches or security incidents involving third-party services
-
-## Summary
-
-**In simple terms:**
-- All your data (prompts, API keys, settings) is stored locally on your device
-- We don't send your data to any servers we control
-- When you use AI features, your data goes directly to Groq's API (if you provide an API key)
-- When you send prompts, they go directly to the AI chatbot platforms you select
-- You can delete all your data by uninstalling the extension
-- We don't track you, sell your data, or use it for advertising
+- Children's Online Privacy Protection Act (COPPA)
 
 ---
 
-**Effective Date:** [17 Feb 2026]  
-**Extension Version:** 2.0.2  
-**Policy Version:** 1.0
+## Contact
 
+Questions about this policy or our data practices? Reach us through:
+
+- **GitHub Repository:** [https://github.com/pradhuman-dev/Bread-Prompter-Updates]
+- **Chrome Web Store:** [https://chromewebstore.google.com/detail/nidjlfajbkinfgdjekhfdfpejeegnfjg?utm_source=item-share-cb]
+
+---
+
+> **In plain English:** Your prompts, API keys, and settings live only on your device, encrypted by your OS. We don't track you. We don't know who you are. We have no servers storing your data. You're in full control.
+
+---
+
+*Effective Date: February 17, 2026 · Extension Version: 3.0.0 · Policy Version: 2.1.0*
