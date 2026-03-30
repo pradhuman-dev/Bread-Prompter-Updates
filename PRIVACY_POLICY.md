@@ -1,8 +1,8 @@
 # Privacy Policy for Bread Prompter
 
-**Last Updated:** March 14, 2026
-**Policy Version:** 2.1.0
-**Extension Version:** 3.0.0
+**Last Updated:** March 31, 2026
+**Policy Version:** 3.0.0
+**Extension Version:** 5.0.0
 
 ---
 
@@ -140,6 +140,7 @@ Bread Prompter requests only the permissions it needs to function:
 - **`tabs`** — to open, manage, and group AI chatbot tabs
 - **`storage`** — to save your prompts, settings, and API key locally on your device
 - **`tabGroups`** — to organize AI chatbot tabs into a named group for easy navigation
+- **`sidepanel`** — to render the extension's primary interface as a persistent Chrome side panel. The side panel remains visible while you interact with AI tabs, allowing you to compose and broadcast prompts without losing context. This permission is used solely to display the extension's own UI and does not read or modify any web page content. 
 - **Host permissions** (`chatgpt.com`, `claude.ai`, `gemini.google.com`, `grok.com`, `chat.deepseek.com`) — to detect login status, inject prompts into chat interfaces, and manage tab interactions
 
 No permission is used for tracking, data collection, or any purpose beyond the extension's core features.
